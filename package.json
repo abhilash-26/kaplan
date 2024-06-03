@@ -4,8 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest",
-		"dev": "nodemon"
+		"dev": "nodemon",
+		"test": "jest --runInBand --force-exit"
+
+
 	},
 	"author": "abhilash",
 	"license": "ISC",
