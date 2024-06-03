@@ -1,10 +1,10 @@
 pipeline {                                                                                                       
      agent any
      triggers {
-        cron('H/5 * * * *')
+        cron("${params.Cron_Config}")
      }
      parameters {
-        choice(name:'Choices', choices:['one','two','three'], description:"")
+        choice(name:'Cron_Config', choices:['H/5 * * * *','H/7 * * * *','H/10 * * * *'], description:"")
      }
      
      tools {nodejs "node"}
