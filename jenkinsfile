@@ -3,6 +3,9 @@ pipeline {
      triggers {
         cron('H/5 * * * *')
      }
+     parameters {
+        choice(name:'Choices', choices:['one','two','three'], description:"")
+     }
      
      tools {nodejs "node"}
      
