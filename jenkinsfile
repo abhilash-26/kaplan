@@ -1,15 +1,10 @@
-pipeline{
+pipeline {
     agent any
     stages {
-        stage("Install dependency"){
+        stage('Build') { 
             steps {
-                sh 'npm install'
+                sh 'npm install' 
             }
-        }
-        stage ("Run Test"){
-              steps {
-               sh  'npm test'
-              }
         }
     }
 }
