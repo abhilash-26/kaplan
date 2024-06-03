@@ -4,7 +4,7 @@ pipeline{
         stage("Install dependency"){
              npm install
         }
-        stage ("Run Tests"){
+        stage ("Run Test"){
               npm test
         }
     }
