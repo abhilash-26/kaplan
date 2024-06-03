@@ -2,10 +2,14 @@ pipeline{
     agent any
     stages {
         stage("Install dependency"){
-             npm install
+            steps {
+                npm install
+            }
         }
         stage ("Run Test"){
-              npm test
+              steps {
+                npm test
+              }
         }
     }
 }
