@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages {
+        stage("Install dependency"){
+             npm install
+        }
+        stage ("Run Tests"){
+              npm test
+        }
+    }
+}
