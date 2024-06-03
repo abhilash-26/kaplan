@@ -1,7 +1,8 @@
+String cron_string = cronTimer == 5?'H/5 * * * *':'H/10 * * * *'
 pipeline {                                                                                                       
      agent any
      triggers {
-        cron("${params.Cron_Config}")
+        cron('H/5 * * * *')
      }
      parameters {
         choice(name:'Cron_Config', choices:['H/5 * * * *','H/7 * * * *','H/10 * * * *'], description:"")
