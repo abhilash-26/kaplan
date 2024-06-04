@@ -5,7 +5,7 @@ pipeline {
         cron('H/5 * * * *')
      }
      parameters {
-        choice(name:'Cron_Config', choices:['H/5 * * * *','H/7 * * * *','H/10 * * * *'], description:"")
+        choice(name:'Cron_Config', choices:[20,40,100], description:"")
      }
      
      tools {nodejs "node"}
@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Run Code") {
             steps {
-                sh "node index.js ${params.MY_PARAM}"
+                sh "node index.js ${params.Cron_Config}"
             }
         }
      }
