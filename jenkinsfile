@@ -21,11 +21,11 @@ pipeline {
                 sh "npm test"
             }
         }
-        stage ("Run Code") {
-            steps {
-                // sh "node index.js ${params.Cron_Config}"
-            }
-        }
+        // stage ("Run Code") {
+        //     steps {
+        //         sh "node index.js ${params.Cron_Config}"
+        //     }
+        // }
      }
      post {
         always {
