@@ -23,8 +23,19 @@ pipeline {
         }
         stage ("Run Code") {
             steps {
-                sh "node index.js ${params.Cron_Config}"
+                // sh "node index.js ${params.Cron_Config}"
             }
+        }
+     }
+     post {
+        always {
+            echo "Build Finished"
+        }
+        success {
+            echo "Build success"
+        }
+        failure {
+            echo "Build failed"
         }
      }
   }
